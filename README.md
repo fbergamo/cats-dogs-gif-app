@@ -2,7 +2,7 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.1.3.
 
-You need a giphy APP ID to make the app work. (https://developers.giphy.com/)
+*You need a giphy APP ID to make the app work (https://developers.giphy.com/) and update 'giphy-service.ts'.*
 
 ## Development server
 
