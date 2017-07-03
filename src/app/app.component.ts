@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+
+  gifResponse:Response;
+
+  // This function is needed to pass the gifResponse information from NavbarComponent to GifsListComponent
+  getGifResponse(e){
+    this.gifResponse = e;
+  }
 }

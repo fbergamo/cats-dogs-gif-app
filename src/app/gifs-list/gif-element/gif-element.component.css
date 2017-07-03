@@ -1,0 +1,16 @@
+.gif-element{
+  display:inline-block;
+}
+
+.gif-image{
+  background-image: url('../../../assets/throbber.gif') ;
+  min-width: 200px;
+  min-height: 200px;
+  cursor:pointer;
+}
+
+.gif-element:hover{
+  opacity: 0.3;
+}
+
+

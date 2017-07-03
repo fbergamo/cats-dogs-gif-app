@@ -1,0 +1,28 @@
+<div class="navbar">
+    <h1 class="navbar-heading" id="navbar-h1">Choose your gifs...</h1>
+    <ul class="navbar-button-list">
+
+      <!-- Navigaation arrow to previous page -->
+      <li [class.navbar-page-arrow-disabled]="currentPage===0"
+          class="navbar-page-arrow"
+          *ngIf="selectedButton!=null"
+          (click)="goToPrevPage()"><</li>
+
+      <!-- User inputs: cat button, dog button, input button-->
+      <li [class.selected-button]="selectedButton==='cats-button'" id="cats-button" (click)="selectQuery($event)">CATS</li>
+      <li [class.selected-button]="selectedButton==='dogs-button'" id="dogs-button" (click)="selectQuery($event)">DOGS</li>
+
+      <span class="separator">|</span>
+
+      <input  name="input-query" [(ngModel)]="inputQuery"  class="input-button" type="text">
+      <li [class.selected-button]="selectedButton==='input-button'" id="input-button" class="enter-button" (click)="selectInputQuery()">Enter</li>
+
+      <!-- Navigaation arrow to next page -->
+      <li class="navbar-page-arrow"
+          *ngIf="selectedButton!=null"
+      (click)="goToNextPage()"
+      >></li>
+
+    </ul>
+</div>
+

@@ -1,0 +1,40 @@
+<div class="gifs-grid-container">
+
+  <div *ngIf="gifResponse">
+
+    <!-- Successfull Response -->
+    <div *ngIf="gifResponse.json().meta.status==200">
+      <div *ngIf="gifResponse.json().pagination.count!=0">
+
+
+        <!-- The information about a clicked gif with the closing button-->
+        <div *ngIf="gifInfo" class="info-bar">
+          <span class="close-info-bar" (click)="closeInfo()">X</span>{{gifInfo|json}}
+        </div>
+
+        <!-- List of gifs -->
+        <app-gif-element (info)="getInfo($event)"  *ngFor="let gif of gifResponse.json().data" [gifElem]="gif">
+        </app-gif-element>
+
+
+      </div>
+
+      <!-- Empty data response -->
+      <div *ngIf="gifResponse.json().pagination.count==0">
+        <h1 class="gifs-message">No gifs found...</h1>
+      </div>
+    </div>
+
+    <!-- Error Response -->
+    <div *ngIf="gifResponse.json().meta.status!=200">
+      <h1 class="error-message"><b>{{gifResponse.json().meta.status}}</b>:{{gifResponse.json().meta.msg}}</h1>
+    </div>
+
+
+    <!-- Needed to make the main navbar-->
+    <div class="solid-footer"></div>
+  </div>
+
+
+</div>
+

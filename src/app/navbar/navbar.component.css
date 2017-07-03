@@ -1,0 +1,73 @@
+.navbar{
+  width:100%;
+  position:fixed;
+  bottom:0px;
+  background-color:black;
+  display:inline-block;
+
+}
+
+.input-button{
+  background-color: transparent;
+  border: 0px solid;
+  font-family: inherit;
+  color:white;
+  display:inline-block;
+  border: 5px solid white;
+  color:white;
+  padding:20px;
+  font-size:1em;
+}
+
+.separator{
+  color:white;
+}
+
+.input-button:focus{
+  outline: none;
+}
+
+.navbar-button-list{
+  list-style-type:none;
+  text-align:center;
+  margin-bottom: 30px;
+}
+
+.navbar-heading{
+  text-align:center;
+  color:white;
+  margin-bottom: 50px;
+  font-size:2em;
+}
+
+.navbar-button-list li{
+  display:inline-block;
+  border: 5px solid white;
+  color:white;
+  padding:20px;
+  font-size:1em;
+}
+
+
+
+
+.navbar-page-arrow:hover{
+  background-color:yellow!important;
+}
+
+.navbar-page-arrow-disabled:hover{
+  background-color:gray!important;
+  cursor:not-allowed!important;
+}
+
+
+.selected-button{
+  background-color:blue!important;
+}
+
+.navbar-button-list li:hover{
+  cursor:pointer;
+  background-color:blue;
+}
+
+
